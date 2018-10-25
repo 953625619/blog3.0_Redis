@@ -17,8 +17,8 @@ public class ServletContextListener implements javax.servlet.ServletContextListe
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        optionService = WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext()).getBean(OptionService.class);
         servletContext = sce.getServletContext();
+        optionService = WebApplicationContextUtils.getWebApplicationContext(servletContext).getBean(OptionService.class);
         final Option option = optionService.get(5);
         final Vector<Integer> vector = new Vector<>();
         vector.add(Integer.parseInt(option.getOptionValue()));
