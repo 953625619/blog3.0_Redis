@@ -7,12 +7,14 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authz.HttpMethodPermissionFilter;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 public class URLPathMatchingFilter extends HttpMethodPermissionFilter {
     @Autowired
+    @Lazy
     PermissionService permissionService;
 
     @Override

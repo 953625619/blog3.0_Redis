@@ -102,7 +102,7 @@
     var websocket = null;
     //判断当前浏览器是否支持WebSocket
     if ('WebSocket' in window) {
-        websocket = new WebSocket("ws://localhost:8080/blog/ws/online");
+        websocket = new WebSocket("ws://120.79.215.101:8080/blog/ws/online");
         //
         // //连接成功建立的回调方法
         // websocket.onopen = function () {
